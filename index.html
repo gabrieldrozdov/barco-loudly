@@ -4,19 +4,68 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Barco Loudly</title>
+
+	<meta name="author" content="Gabriel Drozdov">
+	<meta name="keywords" content="HTML, CSS, JavaScript, Music, Songs, Creative Coding, Typography">
+	<meta name="description" content="Barco Loudly makes music and musical things.">
+	<meta property="og:url" content="https://barcoloudly.com/">
+	<meta name="og:title" property="og:title" content="Barco Loudly">
+	<meta property="og:description" content="Barco Loudly makes music and musical things.">
+	<meta property="og:image" content="./assets/meta/opengraph.jpg">
+	<link rel="icon" type="image/png" href="assets/meta/favicon.png" />
+
 	<link rel="stylesheet" href="style.css">
+
+	<!-- Tone.js for audio -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.min.js"></script>
 </head>
 <body>
-	<nav>
-		<h1>Barco Loudly</h1>
-		<a href="https://fontbox.barcoloudly.com" target="_blank">Fontbox</a>
-		<a href="https://earworm.barcoloudly.com" target="_blank">Earworm</a>
-		<a href="https://aurora.barcoloudly.com" target="_blank">Aurora</a>
-	</nav>
+	<div class="container">
+		<nav class="projects">
+			<h2 class="projects-title">Projects</h2>
 
-	<main class="artwork">
+			<div class="project" href="https://fontbox.barcoloudly.com" target="_blank" style="background-color: #70f892;">
+				<h3>BGM</h3>
+				<p>Royalty free songs for non-existent video games.</p>
+				<p class="project-cta">Coming soon!</p>
+			</div>
 
-	</main>
+			<a class="project" href="https://fontbox.barcoloudly.com" target="_blank" style="background-color: #70b4f8;">
+				<h3>Fontbox</h3>
+				<p>Sequencer generating musical typography.</p>
+				<p class="project-cta">Open website <svg viewBox="0 0 92.427 92.427"><polygon points="15.993 0 15.993 20 58.284 20 0 78.284 14.143 92.427 72.427 34.143 72.427 76.434 92.427 76.434 92.427 0 15.993 0"/></svg></p>
+			</a>
+
+			<a class="project" href="https://earworm.barcoloudly.com" target="_blank" style="background-color: #f5c3cb;">
+				<h3>Earworm</h3>
+				<p>Orchestra of wriggling typographic phonemes.</p>
+				<p class="project-cta">Open website <svg viewBox="0 0 92.427 92.427"><polygon points="15.993 0 15.993 20 58.284 20 0 78.284 14.143 92.427 72.427 34.143 72.427 76.434 92.427 76.434 92.427 0 15.993 0"/></svg></p>
+			</a>
+
+			<a class="project" href="https://aurora.barcoloudly.com" target="_blank" style="background-color: #ff9e2e;">
+				<h3>Aurora</h3>
+				<p>Real-time soundtrack for everyday life.</p>
+				<p class="project-cta">Open website <svg viewBox="0 0 92.427 92.427"><polygon points="15.993 0 15.993 20 58.284 20 0 78.284 14.143 92.427 72.427 34.143 72.427 76.434 92.427 76.434 92.427 0 15.993 0"/></svg></p>
+			</a>
+
+			<a class="project" href="music/" target="_blank" style="background-color: #f61d5d;">
+				<h3>Music</h3>
+				<p>Normal music that you can listen to with your ears.</p>
+				<p class="project-cta">See albums <svg viewBox="0 0 92.427 92.427"><polygon points="15.993 0 15.993 20 58.284 20 0 78.284 14.143 92.427 72.427 34.143 72.427 76.434 92.427 76.434 92.427 0 15.993 0"/></svg></p>
+			</a>
+
+			<div class="project" target="_blank" style="background-color: #cfcfcf;">
+				<h3>About Barco</h3>
+				<p>Barco Loudly makes music and musical things that you might like. His name is also <a href="https://gabrieldrozdov.com" target="_blank">Gabriel Drozdov</a>.</p>
+			</div>
+		</nav>
+	
+		<main class="artwork">
+			<div class="title-container">
+				<h1 class="title">Barco&nbsp;Loudly</h1>
+			</div>
+		</main>
+	</div>
 
 	<script src="script.js"></script>
 </body>
