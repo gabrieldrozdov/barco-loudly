@@ -93,7 +93,7 @@ function titleAnimation() {
 
 	requestAnimationFrame(titleAnimation);
 }
-setTimeout(titleAnimation, 1900);
+setTimeout(titleAnimation, 1850);
 
 // Hover effects for moving letters
 function nudgeLetter(letter) {

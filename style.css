@@ -136,19 +136,16 @@ img {
 }
 @keyframes title-smash {
 	0% {
-		transform: scale(.2) rotate(0);
+		transform: scale(.6);
 	}
-	10% {
-		transform: scale(.4) rotate(-5deg);
+	40% {
+		transform: scale(.8);
 	}
-	20% {
-		transform: scale(.6) rotate(10deg);
-	}
-	90% {
-		transform: scale(.4) rotate(0deg);
+	80% {
+		transform: scale(.2);
 	}
 	100% {
-		transform: scale(1) rotate(0deg);
+		transform: scale(1);
 	}
 }
 .title span {
@@ -166,7 +163,7 @@ img {
 	.artwork {
 		grid-row: 1;
 		width: 100vw;
-		height: 50dvh;
+		height: 50vh;
 	}
 	.title {
 		font-size: 12vw;
