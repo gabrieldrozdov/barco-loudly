@@ -3,9 +3,9 @@
 	src: url("assets/fonts/GDLimkinVF.woff2");
 	font-weight: 100 900;
 }
-@font-face {
-	font-family: "Caffeine";
-	src: url("assets/fonts/GDCaffeineVF.woff2");
+:root {
+	--dark: black;
+	--light: white;
 }
 * {
 	margin: 0;
@@ -16,7 +16,7 @@ body {
 	font-family: "Limkin", sans-serif;
 	font-variation-settings: "wght" 700, "SRFF" 0;
 	font-weight: 700;
-	background-color: #fafafa;
+	background-color: var(--light);
 }
 img {
 	display: block;
@@ -36,33 +36,29 @@ img {
 	overflow-y: scroll;
 	position: relative;
 	z-index: 9999;
-}
-.projects-title {
-	font-variation-settings: "wght" 700, "SRFF" 0;
-	font-weight: 700;
-	font-size: 14px;
-	letter-spacing: .2em;
-	background-color: #222;
-	color: #fafafa;
-	text-transform: uppercase;
-	line-height: 1em;
-	padding: 10px 20px 8px 23px;
+	box-shadow: 10px 0 10px rgba(0,0,0,.05), 20px 0 20px rgba(0,0,0,.05);
 }
 .project {
 	flex-grow: 1;
 	flex-shrink: 1;
 	overflow: hidden;
 	padding: 20px;
-	color: black;
+	color: var(--dark);
+	background-color: var(--light);
 	text-decoration: none;
-	transition: flex-shrink .5s, opacity .2s;
+	transition: flex-shrink .5s;
 	position: relative;
 	z-index: 9;
+	box-shadow: 0 -10px 10px rgba(0,0,0,.05), 0 -20px 20px rgba(0,0,0,.05);
 }
 .project:hover {
 	flex-shrink: 0;
 }
-.project:active {
+a.project:hover {
+	color: var(--light);
+	background-color: var(--dark);
+}
+a.project:active {
 	opacity: .5;
 }
 .project img {
@@ -70,7 +66,7 @@ img {
 }
 .project h3 {
 	transform-origin: bottom center;
-	color: #222;
+	color: inherit;
 	margin: 20px 0 10px 0;
 	font-variation-settings: "wght" 900, "SRFF" 0;
 	font-weight: 900;
@@ -79,7 +75,7 @@ img {
 	line-height: 1em;
 }
 .project p {
-	color: #222;
+	color: inherit;
 	font-size: 24px;
 	font-variation-settings: "wght" 600, "SRFF" 0;
 	font-weight: 600;
@@ -87,9 +83,12 @@ img {
 	line-height: 1.2em;
 }
 .project a {
-	color: #222;
-	border-bottom: 2px solid #222;
+	color: inherit;
+	border-bottom: 2px solid var(--dark);
 	text-decoration: none;
+}
+a.project:hover a {
+	border-bottom: 2px solid var(--light);
 }
 .project a:hover {
 	border-bottom: 2px solid transparent;
@@ -99,11 +98,15 @@ img {
 }
 .project-cta {
 	margin-top: 10px;
-	border-bottom: 2px solid #222;
+	border-bottom: 2px solid var(--dark);
 	display: inline-block;
-	fill: #222;
+	fill: var(--dark);
 }
-.project-cta:hover {
+.project:hover .project-cta {
+	border-bottom: 2px solid var(--light);
+	fill: var(--light);
+}
+.project:hover .project-cta:hover {
 	border-bottom: 2px solid transparent;
 }
 .project-cta svg {
@@ -126,7 +129,7 @@ img {
 	transform: translate(-50%, -50%);
 }
 .title {
-	color: #222;
+	color: var(--dark);
 	font-family: "Limkin", sans-serif;
 	font-variation-settings: "wght" 900, "SRFF" 0;
 	font-weight: 900;
