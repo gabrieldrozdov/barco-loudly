@@ -16,7 +16,7 @@ body {
 	font-family: "Limkin", sans-serif;
 	font-variation-settings: "wght" 700, "SRFF" 0;
 	font-weight: 700;
-	background-color: var(--light);
+	background-color: var(--dark);
 }
 img {
 	display: block;
@@ -27,6 +27,9 @@ img {
 	grid-template-columns: 480px 1fr;
 	width: 100vw;
 	height: 100dvh;
+	border: 20px solid var(--dark);
+	gap: 20px;
+	background-color: var(--dark);
 }
 
 /* Projects */
@@ -36,7 +39,8 @@ img {
 	overflow-y: scroll;
 	position: relative;
 	z-index: 9999;
-	box-shadow: 10px 0 10px rgba(0,0,0,.05), 20px 0 20px rgba(0,0,0,.05);
+	gap: 20px;
+	background-color: var(--dark);
 }
 .project {
 	flex-grow: 1;
@@ -49,7 +53,6 @@ img {
 	transition: flex-shrink .5s;
 	position: relative;
 	z-index: 9;
-	box-shadow: 0 -10px 10px rgba(0,0,0,.05), 0 -20px 20px rgba(0,0,0,.05);
 }
 .project:hover {
 	flex-shrink: 0;
@@ -121,6 +124,7 @@ a.project:hover a {
 	white-space: nowrap;
 	overflow: hidden;
 	cursor: crosshair;
+	background-color: var(--light);
 }
 .title-container {
 	position: absolute;
@@ -165,7 +169,6 @@ a.project:hover a {
 	}
 	.artwork {
 		grid-row: 1;
-		width: 100vw;
 		height: 50vh;
 	}
 	.title {
