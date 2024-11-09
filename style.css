@@ -4,8 +4,8 @@
 	font-weight: 100 900;
 }
 :root {
-	--dark: black;
-	--light: white;
+	--hue1: black;
+	--hue2: white;
 }
 * {
 	margin: 0;
@@ -16,7 +16,7 @@ body {
 	font-family: "Limkin", sans-serif;
 	font-variation-settings: "wght" 700, "SRFF" 0;
 	font-weight: 700;
-	background-color: var(--dark);
+	background-color: var(--hue2);
 }
 img {
 	display: block;
@@ -27,9 +27,7 @@ img {
 	grid-template-columns: 480px 1fr;
 	width: 100vw;
 	height: 100dvh;
-	border: 20px solid var(--dark);
-	gap: 20px;
-	background-color: var(--dark);
+	padding: 20px;
 }
 
 /* Projects */
@@ -40,26 +38,27 @@ img {
 	position: relative;
 	z-index: 9999;
 	gap: 20px;
-	background-color: var(--dark);
+	padding: 20px;
 }
 .project {
 	flex-grow: 1;
 	flex-shrink: 1;
 	overflow: hidden;
 	padding: 20px;
-	color: var(--dark);
-	background-color: var(--light);
+	color: var(--hue1);
 	text-decoration: none;
 	transition: flex-shrink .5s;
 	position: relative;
 	z-index: 9;
+	box-shadow: 5px 5px 0 var(--hue1);
+	border: 2px solid var(--hue1);
 }
 .project:hover {
 	flex-shrink: 0;
 }
 a.project:hover {
-	color: var(--light);
-	background-color: var(--dark);
+	color: var(--hue2);
+	background-color: var(--hue1);
 }
 a.project:active {
 	opacity: .5;
@@ -73,7 +72,7 @@ a.project:active {
 	margin: 20px 0 10px 0;
 	font-variation-settings: "wght" 900, "SRFF" 0;
 	font-weight: 900;
-	font-size: 64px;
+	font-size: 48px;
 	letter-spacing: -0.05em;
 	line-height: 1em;
 }
@@ -87,11 +86,11 @@ a.project:active {
 }
 .project a {
 	color: inherit;
-	border-bottom: 2px solid var(--dark);
+	border-bottom: 2px solid var(--hue1);
 	text-decoration: none;
 }
 a.project:hover a {
-	border-bottom: 2px solid var(--light);
+	border-bottom: 2px solid var(--hue2);
 }
 .project a:hover {
 	border-bottom: 2px solid transparent;
@@ -101,13 +100,13 @@ a.project:hover a {
 }
 .project-cta {
 	margin-top: 10px;
-	border-bottom: 2px solid var(--dark);
+	border-bottom: 2px solid var(--hue1);
 	display: inline-block;
-	fill: var(--dark);
+	fill: var(--hue1);
 }
 .project:hover .project-cta {
-	border-bottom: 2px solid var(--light);
-	fill: var(--light);
+	border-bottom: 2px solid var(--hue2);
+	fill: var(--hue2);
 }
 .project:hover .project-cta:hover {
 	border-bottom: 2px solid transparent;
@@ -124,7 +123,10 @@ a.project:hover a {
 	white-space: nowrap;
 	overflow: hidden;
 	cursor: crosshair;
-	background-color: var(--light);
+	border: 2px solid var(--hue1);
+	margin: 20px;
+	box-shadow: 5px 5px 0 var(--hue1);
+	background-color: var(--hue2);
 }
 .title-container {
 	position: absolute;
@@ -133,12 +135,15 @@ a.project:hover a {
 	transform: translate(-50%, -50%);
 }
 .title {
-	color: var(--dark);
+	color: var(--hue2);
 	font-family: "Limkin", sans-serif;
 	font-variation-settings: "wght" 900, "SRFF" 0;
 	font-weight: 900;
 	font-size: 8vw;
 	letter-spacing: -0.05em;
+	text-shadow: 5px 5px 0 var(--hue1);
+	-webkit-text-stroke: 4px var(--hue1);
+	paint-order: stroke fill;
 	animation: title-smash 2s forwards cubic-bezier(0.76, 0, 0.24, 1);
 }
 @keyframes title-smash {
@@ -166,6 +171,7 @@ a.project:hover a {
 		grid-template-columns: 1fr;
 		width: auto;
 		height: auto;
+		padding: 0;
 	}
 	.artwork {
 		grid-row: 1;
@@ -173,6 +179,9 @@ a.project:hover a {
 	}
 	.title {
 		font-size: 12vw;
+	}
+	.projects {
+		padding-top: 0;
 	}
 	.project {
 		flex-grow: 0;

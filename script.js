@@ -106,3 +106,11 @@ function nudgeLetter(letter) {
 
 	movement[key]['speed'] = Math.random()*3+1;
 }
+
+const root = document.querySelector('html');
+function changeColors() {
+	let hue = Math.random()*360;
+	root.style.setProperty('--hue1', `hsl(${hue}deg, 100%, 50%)`);
+	root.style.setProperty('--hue2', `hsl(${hue+180}deg, 100%, 50%)`);
+}
+changeColors();
