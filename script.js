@@ -113,4 +113,4 @@ function changeColors() {
 	root.style.setProperty('--hue1', `hsl(${hue}deg, 100%, 50%)`);
 	root.style.setProperty('--hue2', `hsl(${hue+180}deg, 100%, 50%)`);
 }
-changeColors();
+// changeColors();

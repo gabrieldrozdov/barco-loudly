@@ -44,13 +44,13 @@ img {
 	flex-grow: 1;
 	flex-shrink: 1;
 	overflow: hidden;
-	padding: 20px;
+	padding: 5px 20px 20px 20px;
 	color: var(--hue1);
 	text-decoration: none;
 	transition: flex-shrink .5s;
 	position: relative;
 	z-index: 9;
-	box-shadow: 5px 5px 0 var(--hue1);
+	box-shadow: 10px 10px 0 var(--hue1);
 	border: 2px solid var(--hue1);
 }
 .project:hover {
@@ -125,7 +125,7 @@ a.project:hover a {
 	cursor: crosshair;
 	border: 2px solid var(--hue1);
 	margin: 20px;
-	box-shadow: 5px 5px 0 var(--hue1);
+	box-shadow: 10px 10px 0 var(--hue1);
 	background-color: var(--hue2);
 }
 .title-container {
@@ -135,15 +135,15 @@ a.project:hover a {
 	transform: translate(-50%, -50%);
 }
 .title {
-	color: var(--hue2);
+	color: var(--hue1);
 	font-family: "Limkin", sans-serif;
 	font-variation-settings: "wght" 900, "SRFF" 0;
 	font-weight: 900;
 	font-size: 8vw;
 	letter-spacing: -0.05em;
-	text-shadow: 5px 5px 0 var(--hue1);
-	-webkit-text-stroke: 4px var(--hue1);
-	paint-order: stroke fill;
+	/* text-shadow: 5px 5px 0 var(--hue1); */
+	/* -webkit-text-stroke: 4px var(--hue1); */
+	/* paint-order: stroke fill; */
 	animation: title-smash 2s forwards cubic-bezier(0.76, 0, 0.24, 1);
 }
 @keyframes title-smash {
