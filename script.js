@@ -108,9 +108,8 @@ function nudgeLetter(letter) {
 }
 
 const root = document.querySelector('html');
+let colors = ['red', 'yellow', 'green', 'blue']
 function changeColors() {
-	let hue = Math.random()*360;
-	root.style.setProperty('--hue1', `hsl(${hue}deg, 100%, 50%)`);
-	root.style.setProperty('--hue2', `hsl(${hue+180}deg, 100%, 50%)`);
+	root.style.setProperty('--primary', `var(--${colors[Math.floor(Math.random()*colors.length)]})`);
 }
-// changeColors();
+changeColors();

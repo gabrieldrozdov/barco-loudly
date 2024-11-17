@@ -4,8 +4,13 @@
 	font-weight: 100 900;
 }
 :root {
-	--hue1: black;
-	--hue2: white;
+	--white: #dde5ed;
+	--black: #101820;
+	--green: #0f9e71;
+	--yellow: #ffb600;
+	--blue: #1c6fd4;
+	--red: #e62838;
+	--primary: var(--red);
 }
 * {
 	margin: 0;
@@ -16,7 +21,7 @@ body {
 	font-family: "Limkin", sans-serif;
 	font-variation-settings: "wght" 700, "SRFF" 0;
 	font-weight: 700;
-	background-color: var(--hue2);
+	background-color: var(--primary);
 }
 img {
 	display: block;
@@ -45,23 +50,32 @@ img {
 	flex-shrink: 1;
 	overflow: hidden;
 	padding: 5px 20px 20px 20px;
-	color: var(--hue1);
+	color: var(--black);
 	text-decoration: none;
-	transition: flex-shrink .5s;
+	transition: flex-shrink .5s, transform .5s, opacity .2s;
 	position: relative;
 	z-index: 9;
-	box-shadow: 10px 10px 0 var(--hue1);
-	border: 2px solid var(--hue1);
+	box-shadow: 10px 10px 0 var(--black);
+	border: 2px solid var(--black);
+	background-color: var(--white);
+}
+.project:nth-child(even) {
+	transform: rotate(2deg);
+}
+.project:nth-child(odd) {
+	transform: rotate(-1deg);
 }
 .project:hover {
 	flex-shrink: 0;
+	transform: rotate(0deg);
 }
 a.project:hover {
-	color: var(--hue2);
-	background-color: var(--hue1);
+	color: var(--white);
+	background-color: var(--black);
 }
 a.project:active {
 	opacity: .5;
+	transform: scale(.9);
 }
 .project img {
 	display: none;
@@ -72,13 +86,13 @@ a.project:active {
 	margin: 20px 0 10px 0;
 	font-variation-settings: "wght" 900, "SRFF" 0;
 	font-weight: 900;
-	font-size: 48px;
+	font-size: 32px;
 	letter-spacing: -0.05em;
 	line-height: 1em;
 }
 .project p {
 	color: inherit;
-	font-size: 24px;
+	font-size: 18px;
 	font-variation-settings: "wght" 600, "SRFF" 0;
 	font-weight: 600;
 	letter-spacing: -0.02em;
@@ -86,11 +100,11 @@ a.project:active {
 }
 .project a {
 	color: inherit;
-	border-bottom: 2px solid var(--hue1);
+	border-bottom: 2px solid var(--black);
 	text-decoration: none;
 }
 a.project:hover a {
-	border-bottom: 2px solid var(--hue2);
+	border-bottom: 2px solid var(--white);
 }
 .project a:hover {
 	border-bottom: 2px solid transparent;
@@ -100,13 +114,13 @@ a.project:hover a {
 }
 .project-cta {
 	margin-top: 10px;
-	border-bottom: 2px solid var(--hue1);
+	border-bottom: 2px solid var(--black);
 	display: inline-block;
-	fill: var(--hue1);
+	fill: var(--black);
 }
 .project:hover .project-cta {
-	border-bottom: 2px solid var(--hue2);
-	fill: var(--hue2);
+	border-bottom: 2px solid var(--white);
+	fill: var(--white);
 }
 .project:hover .project-cta:hover {
 	border-bottom: 2px solid transparent;
@@ -123,10 +137,10 @@ a.project:hover a {
 	white-space: nowrap;
 	overflow: hidden;
 	cursor: crosshair;
-	border: 2px solid var(--hue1);
+	border: 2px solid var(--black);
 	margin: 20px;
-	box-shadow: 10px 10px 0 var(--hue1);
-	background-color: var(--hue2);
+	/* box-shadow: 10px 10px 0 var(--black); */
+	/* background-color: var(--white); */
 }
 .title-container {
 	position: absolute;
@@ -135,15 +149,13 @@ a.project:hover a {
 	transform: translate(-50%, -50%);
 }
 .title {
-	color: var(--hue1);
+	color: var(--black);
 	font-family: "Limkin", sans-serif;
 	font-variation-settings: "wght" 900, "SRFF" 0;
 	font-weight: 900;
 	font-size: 8vw;
+	line-height: .5em;
 	letter-spacing: -0.05em;
-	/* text-shadow: 5px 5px 0 var(--hue1); */
-	/* -webkit-text-stroke: 4px var(--hue1); */
-	/* paint-order: stroke fill; */
 	animation: title-smash 2s forwards cubic-bezier(0.76, 0, 0.24, 1);
 }
 @keyframes title-smash {
@@ -179,9 +191,6 @@ a.project:hover a {
 	}
 	.title {
 		font-size: 12vw;
-	}
-	.projects {
-		padding-top: 0;
 	}
 	.project {
 		flex-grow: 0;
