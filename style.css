@@ -29,7 +29,7 @@ img {
 }
 .container {
 	display: grid;
-	grid-template-columns: 480px 1fr;
+	grid-template-columns: 400px 1fr;
 	width: 100vw;
 	height: 100dvh;
 	padding: 20px;
@@ -97,6 +97,7 @@ a.project:active {
 	font-weight: 600;
 	letter-spacing: -0.02em;
 	line-height: 1.2em;
+	text-wrap: pretty;
 }
 .project a {
 	color: inherit;
@@ -139,8 +140,7 @@ a.project:hover a {
 	cursor: crosshair;
 	border: 2px solid var(--black);
 	margin: 20px;
-	/* box-shadow: 10px 10px 0 var(--black); */
-	/* background-color: var(--white); */
+	box-shadow: 10px 10px 0 var(--black);
 }
 .title-container {
 	position: absolute;
@@ -155,7 +155,7 @@ a.project:hover a {
 	font-weight: 900;
 	font-size: 8vw;
 	line-height: .5em;
-	letter-spacing: -0.05em;
+	letter-spacing: -0.06em;
 	animation: title-smash 2s forwards cubic-bezier(0.76, 0, 0.24, 1);
 }
 @keyframes title-smash {
@@ -175,6 +175,95 @@ a.project:hover a {
 .title span {
 	display: inline-block;
 	z-index: 9;
+}
+.title span[data-activate="1"] {
+	filter: blur(5px);
+}
+
+/* Artwork controls */
+.artwork-controls {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 40px;
+	display: flex;
+	outline: 2px solid var(--black);
+	background-color: var(--black);
+	gap: 2px;
+}
+.artwork-controls-input {
+	flex-grow: 1;
+	border: unset;
+	background-color: var(--primary);
+	font-family: "Limkin", sans-serif;
+	font-variation-settings: "wght" 900, "SRFF" 0;
+	font-weight: 900;
+	letter-spacing: -0.02em;
+	padding-left: 10px;
+	font-size: 24px;
+	line-height: 1em;
+	padding-top: .2em;
+	color: var(--black);
+	flex-basis: 0;
+	flex-shrink: 1;
+	min-width: 0;
+}
+.artwork-controls-input::placeholder {
+	color: var(--black);
+}
+.artwork-controls-input:hover {
+	background-color: var(--white);
+}
+.artwork-controls-input:focus::placeholder {
+	color: var(--white);
+}
+.artwork-controls-input:focus {
+	outline: unset;
+	background-color: var(--white);
+}
+.artwork-controls button {
+	flex-shrink: 0;
+	width: 40px;
+	height: 40px;
+	border: unset;
+	background-color: var(--primary);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	fill: var(--black);
+	color: var(--black);
+	font-family: "Limkin", sans-serif;
+	font-variation-settings: "wght" 900, "SRFF" 0;
+	font-weight: 900;
+	letter-spacing: -0.02em;
+}
+.artwork-controls button:hover {
+	background-color: var(--white);
+}
+.artwork-controls button:active {
+	background-color: var(--black);
+	color: var(--white);
+	fill: var(--white);
+}
+.artwork-controls button svg {
+	width: 100%;
+}
+.artwork-controls-volume[data-muted="false"] .artwork-controls-volume-unmute {
+	display: none;
+}
+.artwork-controls-volume[data-muted="true"] .artwork-controls-volume-mute {
+	display: none;
+}
+.artwork-controls-toggle[data-active="0"] {
+	pointer-events: none;
+}
+.artwork-controls-toggle[data-playing="false"] .artwork-controls-toggle-pause {
+	display: none;
+}
+.artwork-controls-toggle[data-playing="true"] .artwork-controls-toggle-play {
+	display: none;
 }
 
 /* Mobile styles */

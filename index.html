@@ -15,6 +15,9 @@
 	<link rel="icon" type="image/png" href="assets/meta/favicon.png" />
 
 	<link rel="stylesheet" href="style.css">
+
+	<!-- Tone.js -->
+	<script src="http://unpkg.com/tone"></script>
 </head>
 <body>
 	<div class="container">
@@ -64,6 +67,20 @@
 		<main class="artwork">
 			<div class="title-container">
 				<h1 class="title">Barco&nbsp;Loudly</h1>
+			</div>
+			<div class="artwork-controls">
+				<button class="artwork-controls-reset" onclick="regenerateTitle();">
+					<svg viewBox="0 0 40 40"><path d="M20.1,8.25c-3,0-5.7,1.1-7.9,3.1l-2.7-2.7-1.3,8.6,8.7-1.1-2.7-2.7c1.6-1.4,3.7-2.2,5.9-2.2,4.9,0,8.8,4,8.8,8.8s-4,8.8-8.8,8.8-6.3-1.8-7.9-4.8l-.3-.5-2.5,1.5.2.4c2,3.9,6,6.3,10.4,6.3,6.5,0,11.8-5.3,11.8-11.8s-5.2-11.7-11.7-11.7Z"/></svg>
+				</button>
+				<input type="text" class="artwork-controls-input" value="Barco Loudly" placeholder="Type here!" oninput="regenerateTitle();">
+				<button class="artwork-controls-toggle" data-playing="true" onclick="toggleAnimation();">
+					<svg viewBox="0 0 40 40" class="artwork-controls-toggle-pause"><path d="M17.25,30h-3.5V10h3.5v20ZM26.25,10h-3.5v20h3.5V10Z"/></svg>
+					<svg viewBox="0 0 40 40" class="artwork-controls-toggle-play"><path d="M12,30V10l18,10-18,10Z"/></svg>
+				</button>
+				<button class="artwork-controls-volume" data-muted="true" onclick="toggleVolume();">
+					<svg viewBox="0 0 40 40" class="artwork-controls-volume-mute"><path d="M14,15l8-5v20l-8-5v-10ZM8,25h4v-10h-4v10ZM28.26,11.74l-1.5,1.5c1.85,1.78,2.98,4.16,2.98,6.77s-1.14,4.98-2.98,6.77l1.5,1.5c2.31-2.15,3.74-5.06,3.74-8.26s-1.43-6.11-3.74-8.26ZM27.77,20c0-2.08-.92-3.97-2.38-5.39l-1.5,1.5c1.01,1.05,1.64,2.4,1.64,3.89s-.62,2.84-1.63,3.89l1.5,1.5c1.47-1.42,2.38-3.31,2.38-5.39Z"/></svg>
+					<svg viewBox="0 0 40 40" class="artwork-controls-volume-unmute"><path d="M27,14.36v15.64l-8-5v-.78l8-9.86ZM30,8.26l-1.55-1.26-3.45,4.25-6.01,3.75v3.65l-2,2.46v-6.11h-4v10h.84l-3.84,4.74,1.55,1.26L30,8.26Z"/></svg>
+				</button>
 			</div>
 		</main>
 	</div>
