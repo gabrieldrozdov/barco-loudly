@@ -1,12 +1,14 @@
 @font-face {
 	font-family: "Limkin";
-	src: url("assets/fonts/GDLimkinVF.woff2");
+	src: url("https://toomuchtype.com/fonts/limkin/variable/TMT-LimkinVF.ttf") format(truetype),
+		 url("https://toomuchtype.com/fonts/limkin/variable/TMT-LimkinVF.woff") format(woff),
+		 url("https://toomuchtype.com/fonts/limkin/variable/TMT-LimkinVF.woff2") format(woff2);
 	font-weight: 100 900;
 }
 :root {
 	--white: #dde5ed;
 	--black: #101820;
-	--green: #0f9e71;
+	/* --green: #0f9e71; */
 	--yellow: #ffb600;
 	--blue: #1c6fd4;
 	--red: #e62838;
@@ -208,6 +210,7 @@ a.project:hover a {
 	flex-basis: 0;
 	flex-shrink: 1;
 	min-width: 0;
+	border-radius: 0;
 }
 .artwork-controls-input::placeholder {
 	color: var(--black);

@@ -1,7 +1,7 @@
 // Set random page color
 function changeColors() {
 	const root = document.querySelector('html');
-	let colors = ['red', 'yellow', 'green', 'blue'];
+	let colors = ['red', 'yellow', 'blue'];
 	root.style.setProperty('--primary', `var(--${colors[Math.floor(Math.random()*colors.length)]})`);
 }
 changeColors();
