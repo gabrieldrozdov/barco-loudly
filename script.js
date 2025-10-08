@@ -1,11 +1,3 @@
-// Set random page color
-function changeColors() {
-	const root = document.querySelector('html');
-	let colors = ['red', 'yellow', 'blue'];
-	root.style.setProperty('--primary', `var(--${colors[Math.floor(Math.random()*colors.length)]})`);
-}
-changeColors();
-
 // Map to track letters
 let movement = new Map();
 
@@ -43,7 +35,11 @@ function generateTitle() {
 	// Generate letter spans and map entries
 	let temp = '';
 	let index = 0;
-	for (let letter of title.innerText) {
+	let titleText = title.innerText;
+	if (titleText == "") {
+		titleText = "Barco Loudly";
+	}
+	for (let letter of titleText) {
 		temp += `<span id="letter${index}" onmouseenter="nudgeLetter(this)">${letter}</span>`;
 	
 		movement.set("letter"+index, {
