@@ -37,7 +37,7 @@ function generateTitle() {
 	let index = 0;
 	let titleText = title.innerText;
 	if (titleText == "") {
-		titleText = "Barco Loudly";
+		titleText = "Barco Loudly";
 	}
 	for (let letter of titleText) {
 		temp += `<span id="letter${index}" onmouseenter="nudgeLetter(this)">${letter}</span>`;

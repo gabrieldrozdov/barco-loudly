@@ -160,7 +160,7 @@ a.project:hover a {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	border: 2px solid var(--black);
+	/* border: 2px solid var(--black); */
 	z-index: 999;
 	pointer-events: none;
 }
@@ -245,7 +245,7 @@ a.project:hover a {
 	outline: 2px solid var(--black);
 	/* background-color: var(--black); */
 	gap: 2px;
-	padding: 0 2px 2px 2px;
+	/* padding: 0 2px 2px 2px; */
 }
 .artwork-controls-input {
 	outline: 2px solid var(--black);
