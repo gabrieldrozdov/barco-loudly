@@ -68,10 +68,15 @@ function generateTitle() {
 		index++;
 	}
 	title.innerHTML = temp;
-
-	titleBreak = setTimeout(() => { loop = true; animateTitle(); }, 1850);
 }
 generateTitle();
+
+document.querySelector('.title').addEventListener('animationend', function() {
+	if (!loop) {
+		loop = true;
+		animateTitle();
+	}
+});
 
 // Move letters
 function animateTitle() {
@@ -184,7 +189,11 @@ function nudgeLetter(letter) {
 		entry['directionRot'] = 0;
 	}
 
-	entry['speed'] = Math.random()*5+1;
+	if (Math.random() < .75) {
+		entry['speed'] = Math.random()*6+1;
+	} else {
+		entry['speed'] = Math.random()*20+1;
+	}
 
 	// Play sound and style letter
 	if (!entry['active']) {

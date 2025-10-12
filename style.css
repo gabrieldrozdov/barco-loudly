@@ -206,17 +206,20 @@ a.project:hover a {
 	font-size: 8vw;
 	line-height: .5em;
 	letter-spacing: -0.05em;
-	animation: title-smash 2s forwards cubic-bezier(0.76, 0, 0.24, 1);
+	animation: title-smash 1.5s forwards;
 }
 @keyframes title-smash {
 	0% {
-		transform: scale(.6);
+		transform: scale(.5);
+		animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
 	}
-	40% {
-		transform: scale(.8);
+	50% {
+		transform: scale(.75);
+		animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
 	}
 	80% {
-		transform: scale(.2);
+		transform: scale(.25);
+		animation-timing-function: cubic-bezier(0.64, 0, 0.78, 0);
 	}
 	100% {
 		transform: scale(1);
