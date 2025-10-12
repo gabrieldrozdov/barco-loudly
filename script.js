@@ -222,3 +222,28 @@ function playSound(synth, note, velocity) {
 		synth.triggerAttackRelease(note, "64n", undefined, velocity);
 	}
 }
+
+// Hover over projects
+let body = document.querySelector('body');
+let artworkIframe = document.querySelector('.artwork-iframe');
+for (let project of document.querySelectorAll('.project')) {
+	if (project.dataset.color != undefined) {
+		let embed;
+		project.addEventListener('mouseenter', () => {
+			body.style.backgroundColor = project.dataset.color;
+			embed = document.createElement('div');
+			embed.style.transform = 'scale(0) rotate(-45deg)';
+			let iframe = document.createElement('iframe');
+			iframe.src = project.href;
+			embed.appendChild(iframe);
+			artworkIframe.appendChild(embed);
+			setTimeout(() => {embed.style.transform = 'scale(1)'}, 50);
+		})
+		project.addEventListener('mouseleave', () => {
+			body.style.backgroundColor = '';
+			const ref = embed;
+			setTimeout(() => {ref.style.transform = 'scale(0) rotate(45deg)';}, 100);
+			setTimeout(() => {ref.remove();}, 600);
+		})
+	}
+}

@@ -26,6 +26,8 @@ body {
 	font-variation-settings: "wght" 700, "SRFF" 0;
 	font-weight: 700;
 	background-color: var(--primary);
+	transition: background-color .2s;
+	/* filter: grayscale(100%); */
 }
 img {
 	display: block;
@@ -143,8 +145,37 @@ a.project:hover a {
 	cursor: crosshair;
 	border: 2px solid var(--black);
 	margin: 20px;
-	background-color: var(--primary);
+	/* background-color: var(--primary); */
 	box-shadow: 10px 10px 0 var(--black);
+}
+.artwork-iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border: 2px solid var(--black);
+	z-index: 999;
+	pointer-events: none;
+}
+.artwork-iframe div {
+	background-color: black;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	transition: transform .5s;
+	outline: 4px solid var(--black);
+}
+.artwork-iframe iframe {
+	width: 100%;
+	height: 100%;
+	display: block;
+	border: unset;
 }
 .title-container {
 	position: absolute;
@@ -193,13 +224,14 @@ a.project:hover a {
 	height: 40px;
 	display: flex;
 	outline: 2px solid var(--black);
-	background-color: var(--black);
+	/* background-color: var(--black); */
 	gap: 2px;
 }
 .artwork-controls-input {
+	outline: 2px solid var(--black);
 	flex-grow: 1;
 	border: unset;
-	background-color: var(--primary);
+	background-color: transparent;
 	font-family: "Limkin", sans-serif;
 	font-variation-settings: "wght" 900, "SRFF" 0;
 	font-weight: 900;
@@ -233,7 +265,8 @@ a.project:hover a {
 	width: 40px;
 	height: 40px;
 	border: unset;
-	background-color: var(--primary);
+	background-color: transparent;
+	outline: 2px solid var(--black);
 	display: flex;
 	align-items: center;
 	justify-content: center;
