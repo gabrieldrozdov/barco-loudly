@@ -37,25 +37,24 @@ img {
 	display: grid;
 	grid-template-columns: 400px 1fr;
 	width: 100vw;
-	height: 100dvh;
-	padding: 20px;
+	/* padding: 20px; */
 }
 
 /* Projects */
 .projects {
 	display: flex;
 	flex-direction: column;
-	overflow-y: scroll;
 	position: relative;
 	z-index: 9999;
-	gap: 20px;
-	padding: 20px;
+	gap: 0;
+	margin: 20px 0 20px 20px;
+	padding: 10px;
 }
 .project {
 	flex-grow: 1;
 	flex-shrink: 1;
 	overflow: hidden;
-	padding: 5px 20px 20px 20px;
+	padding: 3px 20px 20px 20px;
 	color: var(--black);
 	text-decoration: none;
 	transition: flex-shrink .5s, transform .5s, opacity .2s;
@@ -64,12 +63,15 @@ img {
 	box-shadow: 10px 10px 0 var(--black);
 	border: 2px solid var(--black);
 	background-color: var(--primary);
+	max-width: 320px;
+	width: 100%;
 }
 .project:nth-child(even) {
-	transform: rotate(2deg);
+	transform: rotate(4deg);
+	margin-left: auto;
 }
 .project:nth-child(odd) {
-	transform: rotate(-1deg);
+	transform: rotate(-4deg);
 }
 .project:hover {
 	flex-shrink: 0;
@@ -80,7 +82,7 @@ a.project:hover {
 	background-color: var(--black);
 }
 a.project:active {
-	opacity: .5;
+	/* opacity: .5; */
 	transform: scale(.9);
 }
 .project img {
@@ -144,9 +146,13 @@ a.project:hover a {
 	overflow: hidden;
 	cursor: crosshair;
 	border: 2px solid var(--black);
-	margin: 20px;
+	margin: 40px;
 	/* background-color: var(--primary); */
 	box-shadow: 10px 10px 0 var(--black);
+	height: calc(100dvh - 80px);
+	position: sticky;
+	top: 40px;
+	align-self: start;
 }
 .artwork-iframe {
 	position: absolute;
@@ -176,6 +182,16 @@ a.project:hover a {
 	height: 100%;
 	display: block;
 	border: unset;
+	opacity: 0;
+	animation: artwork-iframe .75s .25s forwards;
+}
+@keyframes artwork-iframe {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 .title-container {
 	position: absolute;
@@ -311,18 +327,39 @@ a.project:hover a {
 		grid-template-columns: 1fr;
 		width: auto;
 		height: auto;
-		padding: 0;
 	}
 	.artwork {
 		grid-row: 1;
 		height: 50vh;
+		margin: 20px;
+		position: relative;
+		top: 0;
 	}
 	.title {
 		font-size: 12vw;
+	}
+	.projects {
+		margin: 20px;
 	}
 	.project {
 		flex-grow: 0;
 		flex-shrink: 0;
 		overflow: auto;
+		max-width: 540px;
+	}
+	.project:nth-child(even) {
+		transform: rotate(2deg);
+	}
+	.project:nth-child(odd) {
+		transform: rotate(-2deg);
+	}
+	.project:hover {
+		flex-shrink: 0;
+		transform: rotate(0deg);
+	}
+}
+@media only screen and (max-width: 640px) {
+	.project {
+		max-width: 320px;
 	}
 }
