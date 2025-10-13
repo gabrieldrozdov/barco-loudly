@@ -344,7 +344,7 @@ a.project:hover a {
 		font-size: 12vw;
 	}
 	.projects {
-		margin: 20px;
+		margin: 0 15px 15px 15px;
 	}
 	.project {
 		flex-grow: 0;
