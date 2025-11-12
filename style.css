@@ -7,11 +7,13 @@
 }
 :root {
 	--blue: #57b6fe;
-	--red: #ff4476;
+	--red: #ff6b6b;
 	--yellow: #ffba0b;
-	--green: #8feca5;
+	--green: #55e477;
 	--purple: #ca8fec;
-	--orange: #ff8752;
+	--orange: #fb8938;
+	--lime: #bfe111;
+	--pink: #fc7cb8;
 	--white: white;
 	--black: black;
 	--primary: #eee;
