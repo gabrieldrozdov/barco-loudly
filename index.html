@@ -3,101 +3,193 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Barco Loudly</title>
+	<title>barco loudly makes websites</title>
 
 	<meta name="author" content="Gabriel Drozdov">
-	<meta name="keywords" content="HTML, CSS, JavaScript, Music, Songs, Creative Coding, Typography">
-	<meta name="description" content="Barco Loudly makes music and musical things.">
+	<meta name="keywords" content="Net Art, Creative Coding, Small Web, Handmade Web">
+	<meta name="description" content="barco loudly makes websites">
 	<meta property="og:url" content="https://barcoloudly.com/">
-	<meta name="og:title" property="og:title" content="Barco Loudly">
-	<meta property="og:description" content="Barco Loudly makes music and musical things.">
-	<meta property="og:image" content="/assets/meta/opengraph.jpg">
-	<link rel="icon" type="image/png" href="/assets/meta/favicon-barcoloudly.png" />
+	<meta name="og:title" property="og:title" content="barco loudly">
+	<meta property="og:description" content="barco loudly makes websites">
+	<meta property="og:image" content="/assets/meta/opengraph.png">
+	<link rel="icon" type="image/png" href="/assets/meta/favicon.png" />
 
-	<link rel="stylesheet" href="style.css">
-
-	<!-- Tone.js -->
-	<script src="https://unpkg.com/tone"></script>
+	<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 	<div class="container">
-		<nav class="projects">
-			<a class="project" href="https://welcome.barcoloudly.com" target="_blank" style="--primary: #ff6b6b;" data-color="#ff6b6b">
-				<h3>Welcome</h3>
-				<p>Welcome to this website, but actually a different website.</p>
-				<p class="project-cta">Open website <svg viewBox="0 0 92.427 92.427"><polygon points="15.993 0 15.993 20 58.284 20 0 78.284 14.143 92.427 72.427 34.143 72.427 76.434 92.427 76.434 92.427 0 15.993 0"/></svg></p>
+		<div class="mouse">
+			<img src="/assets/media/mouse.gif">
+		</div>
+
+		<header class="header">
+			<h1 class="title caffeine animated">barco loudly makes websites</h1>
+		</header>
+
+		<nav>
+			<a href="javascript:void(0)" class="nav-link nav-link-left" onclick="goRando();">
+				<img src="/assets/media/rando.gif">
+				<h3 class="caffeine animated">go rando</h3>
 			</a>
-
-			<a class="project" href="https://jukebox.barcoloudly.com" target="_blank" style="--primary: #ca8fec;" data-color="#ca8fec">
-				<h3>Jukebox</h3>
-				<p>Normal music for your ears.</p>
-				<p class="project-cta">Open website <svg viewBox="0 0 92.427 92.427"><polygon points="15.993 0 15.993 20 58.284 20 0 78.284 14.143 92.427 72.427 34.143 72.427 76.434 92.427 76.434 92.427 0 15.993 0"/></svg></p>
+			<a href="/info/" class="nav-link nav-link-right">
+				<img src="/assets/media/question.gif">
+				<h3 class="caffeine animated">who’s barco</h3>
 			</a>
-
-			<a class="project" href="https://bgm.barcoloudly.com" target="_blank" style="--primary: #55e477;" data-color="#55e477">
-				<h3>BGM</h3>
-				<p>Royalty-free songs for things you could make.</p>
-				<p class="project-cta">Open Website <svg viewBox="0 0 92.427 92.427"><polygon points="15.993 0 15.993 20 58.284 20 0 78.284 14.143 92.427 72.427 34.143 72.427 76.434 92.427 76.434 92.427 0 15.993 0"/></svg></p>
-			</a>
-
-			<a class="project" href="https://fontbox.barcoloudly.com" target="_blank" style="--primary: #57b6fe;" data-color="#57b6fe">
-				<h3>Fontbox</h3>
-				<p>Sequencer generating musical typography.</p>
-				<p class="project-cta">Open website <svg viewBox="0 0 92.427 92.427"><polygon points="15.993 0 15.993 20 58.284 20 0 78.284 14.143 92.427 72.427 34.143 72.427 76.434 92.427 76.434 92.427 0 15.993 0"/></svg></p>
-			</a>
-
-			<a class="project" href="https://earworm.barcoloudly.com" target="_blank" style="--primary: #fc7cb8;" data-color="#fc7cb8">
-				<h3>Earworm</h3>
-				<p>Orchestra of wriggling typographic phonemes.</p>
-				<p class="project-cta">Open website <svg viewBox="0 0 92.427 92.427"><polygon points="15.993 0 15.993 20 58.284 20 0 78.284 14.143 92.427 72.427 34.143 72.427 76.434 92.427 76.434 92.427 0 15.993 0"/></svg></p>
-			</a>
-
-			<a class="project" href="https://animalese.barcoloudly.com" target="_blank" style="--primary: #bfe111;" data-color="#fc7cb8">
-				<h3>Animalese</h3>
-				<p>Type with the beautiful voice of the animals.</p>
-				<p class="project-cta">Open website <svg viewBox="0 0 92.427 92.427"><polygon points="15.993 0 15.993 20 58.284 20 0 78.284 14.143 92.427 72.427 34.143 72.427 76.434 92.427 76.434 92.427 0 15.993 0"/></svg></p>
-			</a>
-
-			<!-- <a class="project" href="https://aurora.barcoloudly.com" target="_blank" style="--primary: #ffba0b;" data-color="#ffba0b">
-				<h3>Aurora</h3>
-				<p>Real-time soundtrack for everyday life.</p>
-				<p class="project-cta">Open website <svg viewBox="0 0 92.427 92.427"><polygon points="15.993 0 15.993 20 58.284 20 0 78.284 14.143 92.427 72.427 34.143 72.427 76.434 92.427 76.434 92.427 0 15.993 0"/></svg></p>
-			</a> -->
-
-			<a class="project" href="https://doggychristmus.com" target="_blank" style="--primary: #fb8938;" data-color="#fb8938">
-				<h3>Doggy Christmus</h3>
-				<p>It’s a doggy christmus, woof woof.</p>
-				<p class="project-cta">Open website <svg viewBox="0 0 92.427 92.427"><polygon points="15.993 0 15.993 20 58.284 20 0 78.284 14.143 92.427 72.427 34.143 72.427 76.434 92.427 76.434 92.427 0 15.993 0"/></svg></p>
-			</a>
-
-			<div class="project" style="--primary: white;">
-				<h3>About Barco</h3>
-				<p>Barco Loudly makes music and musical things that you might like. For non-musical things, there’s <a href="https://noreplica.com/" target="_blank">No&nbsp;Replica</a>.</p>
-			</div>
 		</nav>
-	
-		<main class="artwork">
-			<div class="artwork-iframe"></div>
-			<div class="title-container">
-				<h1 class="title">Barco&nbsp;Loudly</h1>
-			</div>
-			<div class="artwork-controls">
-				<button class="artwork-controls-reset" onclick="regenerateTitle();">
-					<svg viewBox="0 0 40 40"><path d="M20.1,8.25c-3,0-5.7,1.1-7.9,3.1l-2.7-2.7-1.3,8.6,8.7-1.1-2.7-2.7c1.6-1.4,3.7-2.2,5.9-2.2,4.9,0,8.8,4,8.8,8.8s-4,8.8-8.8,8.8-6.3-1.8-7.9-4.8l-.3-.5-2.5,1.5.2.4c2,3.9,6,6.3,10.4,6.3,6.5,0,11.8-5.3,11.8-11.8s-5.2-11.7-11.7-11.7Z"/></svg>
-				</button>
-				<button class="artwork-controls-toggle" data-playing="true" onclick="toggleAnimation();">
-					<svg viewBox="0 0 40 40" class="artwork-controls-toggle-pause"><path d="M17.25,30h-3.5V10h3.5v20ZM26.25,10h-3.5v20h3.5V10Z"/></svg>
-					<svg viewBox="0 0 40 40" class="artwork-controls-toggle-play"><path d="M12,30V10l18,10-18,10Z"/></svg>
-				</button>
-				<button class="artwork-controls-volume" data-muted="true" onclick="toggleVolume();">
-					<svg viewBox="0 0 40 40" class="artwork-controls-volume-mute"><path d="M14,15l8-5v20l-8-5v-10ZM8,25h4v-10h-4v10ZM28.26,11.74l-1.5,1.5c1.85,1.78,2.98,4.16,2.98,6.77s-1.14,4.98-2.98,6.77l1.5,1.5c2.31-2.15,3.74-5.06,3.74-8.26s-1.43-6.11-3.74-8.26ZM27.77,20c0-2.08-.92-3.97-2.38-5.39l-1.5,1.5c1.01,1.05,1.64,2.4,1.64,3.89s-.62,2.84-1.63,3.89l1.5,1.5c1.47-1.42,2.38-3.31,2.38-5.39Z"/></svg>
-					<svg viewBox="0 0 40 40" class="artwork-controls-volume-unmute"><path d="M27,14.36v15.64l-8-5v-.78l8-9.86ZM30,8.26l-1.55-1.26-3.45,4.25-6.01,3.75v3.65l-2,2.46v-6.11h-4v10h.84l-3.84,4.74,1.55,1.26L30,8.26Z"/></svg>
-				</button>
-				<input type="text" class="artwork-controls-input" value="" placeholder="Type here!" oninput="regenerateTitle();">
-			</div>
+
+		<main class="projects">
+			<a class="project" href="https://rnd.barcoloudly.com" target="_blank">
+				<img src="/assets/media/rnd.gif">
+				<h3 class="caffeine">Research + Development</h3>
+			</a>
+
+			<a class="project" href="https://bounce.barcoloudly.com" target="_blank">
+				<img src="/assets/media/bounce.gif">
+				<h3 class="caffeine">Bounce House</h3>
+			</a>
+
+			<a class="project" href="https://anxiety.barcoloudly.com" target="_blank">
+				<img src="/assets/media/anxiety.gif">
+				<h3 class="caffeine">Anxiety Machine</h3>
+			</a>
+
+			<a class="project" href="https://doggychristmus.com" target="_blank">
+				<img src="/assets/media/doggy.gif">
+				<h3 class="caffeine">Doggy Christmus</h3>
+			</a>
+
+			<a class="project" href="https://animalese.barcoloudly.com" target="_blank">
+				<img src="/assets/media/animalese.gif">
+				<h3 class="caffeine">Animalese</h3>
+			</a>
+
+			<a class="project" href="https://jukebox.barcoloudly.com" target="_blank">
+				<img src="/assets/media/jukebox.gif">
+				<h3 class="caffeine">Jukebox</h3>
+			</a>
+
+			<a class="project" href="https://bgm.barcoloudly.com" target="_blank">
+				<img src="/assets/media/bgm.gif">
+				<h3 class="caffeine">BGM</h3>
+			</a>
+
+			<a class="project" href="https://qr.barcoloudly.com" target="_blank">
+				<img src="/assets/media/qr.gif">
+				<h3 class="caffeine">QR Generator Generator</h3>
+			</a>
+
+			<a class="project" href="https://fontbox.barcoloudly.com" target="_blank">
+				<img src="/assets/media/fontbox.gif">
+				<h3 class="caffeine">Fontbox</h3>
+			</a>
+
+			<a class="project" href="https://welcome.barcoloudly.com" target="_blank">
+				<img src="/assets/media/welcome.gif">
+				<h3 class="caffeine">Welcome</h3>
+			</a>
+
+			<a class="project" href="https://aurora.barcoloudly.com" target="_blank">
+				<img src="/assets/media/aurora.gif">
+				<h3 class="caffeine">Aurora</h3>
+			</a>
+
+			<a class="project" href="https://ghost.barcoloudly.com" target="_blank">
+				<img src="/assets/media/ghost.gif">
+				<h3 class="caffeine">Ghost</h3>
+			</a>
+
+			<a class="project" href="https://gems.barcoloudly.com" target="_blank">
+				<img src="/assets/media/gems.gif">
+				<h3 class="caffeine">Gems</h3>
+			</a>
+
+			<a class="project" href="https://zag.barcoloudly.com" target="_blank">
+				<img src="/assets/media/zag.gif">
+				<h3 class="caffeine">Zag</h3>
+			</a>
+
+			<a class="project" href="https://nauticalmaps.barcoloudly.com" target="_blank">
+				<img src="/assets/media/nauticalmaps.gif">
+				<h3 class="caffeine">Nautical Maps</h3>
+			</a>
+
+			<a class="project" href="https://picketfence.barcoloudly.com" target="_blank">
+				<img src="/assets/media/picketfence.gif">
+				<h3 class="caffeine">Picket Fence</h3>
+			</a>
+
+			<a class="project" href="https://doesnotexist.barcoloudly.com" target="_blank">
+				<img src="/assets/media/doesnotexist.gif">
+				<h3 class="caffeine">Does Not Exist</h3>
+			</a>
+
+			<a class="project" href="https://onomatopoeia.barcoloudly.com" target="_blank">
+				<img src="/assets/media/onomatopoeia.gif">
+				<h3 class="caffeine">Onomatopoeia</h3>
+			</a>
+
+			<a class="project" href="https://zoom.barcoloudly.com" target="_blank">
+				<img src="/assets/media/zoooooooom.gif">
+				<h3 class="caffeine">Zoooooooom</h3>
+			</a>
+
+			<a class="project" href="https://madgab4ever.com" target="_blank">
+				<img src="/assets/media/madgab4ever.gif">
+				<h3 class="caffeine">madgab4ever</h3>
+			</a>
+
+			<a class="project" href="https://earworm.barcoloudly.com" target="_blank">
+				<img src="/assets/media/earworm.gif">
+				<h3 class="caffeine">Earworm</h3>
+			</a>
+
+			<a class="project" href="https://px2.barcoloudly.com" target="_blank">
+				<img src="/assets/media/pixelweaver2.gif">
+				<h3 class="caffeine">Pixel Weaver 2.0</h3>
+			</a>
+
+			<a class="project" href="https://landscape.barcoloudly.com" target="_blank">
+				<img src="/assets/media/landscape.gif">
+				<h3 class="caffeine">Untitled (Digital Landscape)</h3>
+			</a>
+
+			<a class="project" href="https://compendium.barcoloudly.com" target="_blank">
+				<img src="/assets/media/compendium.gif">
+				<h3 class="caffeine">A Thesis Compendium</h3>
+			</a>
+
+			<a class="project" href="https://notes.barcoloudly.com" target="_blank">
+				<img src="/assets/media/notes.gif">
+				<h3 class="caffeine">Notes from Neither Here nor There</h3>
+			</a>
+
+			<a class="project" href="https://whatiswikipedia.barcoloudly.com" target="_blank">
+				<img src="/assets/media/wikipedia.gif">
+				<h3 class="caffeine">What Is Wikipedia?</h3>
+			</a>
+
+			<a class="project" href="https://smilethroughit.barcoloudly.com" target="_blank">
+				<img src="/assets/media/smilethroughit.gif">
+				<h3 class="caffeine">Smile Through It</h3>
+			</a>
+
+			<a class="project" href="https://px1.barcoloudly.com" target="_blank">
+				<img src="/assets/media/pixelweaver1.gif">
+				<h3 class="caffeine">Pixel Weaver 1.0</h3>
+			</a>
+
+			<a class="project" href="https://otf-ttf.barcoloudly.com" target="_blank">
+				<img src="/assets/media/otf-ttf.gif">
+				<h3 class="caffeine">.otf, .ttf</h3>
+			</a>
+
+			<a class="project" href="https://calligraphers.barcoloudly.com" target="_blank">
+				<img src="/assets/media/calligraphers.gif">
+				<h3 class="caffeine">Tag Team Calligraphers</h3>
+			</a>
 		</main>
 	</div>
 
-	<script src="script.js"></script>
+	<script src="/script.js"></script>
 </body>
 </html>
