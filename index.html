@@ -3,14 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>barco loudly makes websites</title>
+	<title>barco loudly, hand-crafted websites</title>
 
 	<meta name="author" content="Gabriel Drozdov">
 	<meta name="keywords" content="Net Art, Creative Coding, Small Web, Handmade Web">
-	<meta name="description" content="barco loudly makes websites">
+	<meta name="description" content="barco loudly, hand-crafted websites">
 	<meta property="og:url" content="https://barcoloudly.com/">
 	<meta name="og:title" property="og:title" content="barco loudly">
-	<meta property="og:description" content="barco loudly makes websites">
+	<meta property="og:description" content="barco loudly, hand-crafted websites">
 	<meta property="og:image" content="/assets/meta/opengraph.png">
 	<link rel="icon" type="image/png" href="/assets/meta/favicon.png" />
 
@@ -19,173 +19,457 @@
 <body>
 	<div class="container">
 		<div class="mouse">
-			<img src="/assets/media/mouse.gif">
+			<img src="/assets/ui/mouse.gif">
 		</div>
 
 		<header class="header">
-			<h1 class="title caffeine animated">barco loudly makes websites</h1>
+			<img src="/assets/ui/barco-desktop.gif" class="header-logo header-logo-desktop">
+			<img src="/assets/ui/barco-mobile.gif" class="header-logo header-logo-mobile">
+			<h1 class="header-title">barco loudly, hand-crafted websites</h1>
+			<nav class="nav">
+				<a href="javascript:void(0)" onclick="goRando();" class="nav-link">go rando</a>
+				<a href="https://www.instagram.com/barcoloudly/" target="_blank" class="nav-link">insta</a>
+				<a href="/info/" class="nav-link">who’s barco</a>
+			</nav>
 		</header>
 
-		<nav>
-			<a href="javascript:void(0)" class="nav-link nav-link-left" onclick="goRando();">
-				<img src="/assets/media/rando.gif">
-				<h3 class="caffeine animated">go rando</h3>
-			</a>
-			<a href="/info/" class="nav-link nav-link-right">
-				<img src="/assets/media/question.gif">
-				<h3 class="caffeine animated">who’s barco</h3>
-			</a>
-		</nav>
+		<div class="sidebar sidebar-left"></div>
+		<div class="sidebar sidebar-right"></div>
 
 		<main class="projects">
 			<a class="project" href="https://rnd.barcoloudly.com" target="_blank">
-				<img src="/assets/media/rnd.gif">
-				<h3 class="caffeine">Research + Development</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">Research + Development</span>
+					</h3>
+					<img src="/assets/icons/rnd.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/rnd.jpg">
+						<source data-src="/assets/thumbnails/rnd.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://bounce.barcoloudly.com" target="_blank">
-				<img src="/assets/media/bounce.gif">
-				<h3 class="caffeine">Bounce House</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">Bounce House</span>
+					</h3>
+					<img src="/assets/icons/bounce.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/bounce.jpg">
+						<source data-src="/assets/thumbnails/bounce.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://anxiety.barcoloudly.com" target="_blank">
-				<img src="/assets/media/anxiety.gif">
-				<h3 class="caffeine">Anxiety Machine</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">Anxiety Machine</span>
+					</h3>
+					<img src="/assets/icons/anxiety.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/anxiety.jpg">
+						<source data-src="/assets/thumbnails/anxiety.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://doggychristmus.com" target="_blank">
-				<img src="/assets/media/doggy.gif">
-				<h3 class="caffeine">Doggy Christmus</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">Doggy Christmus</span>
+					</h3>
+					<img src="/assets/icons/doggychristmus.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/doggychristmus.jpg">
+						<source data-src="/assets/thumbnails/doggychristmus.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://animalese.barcoloudly.com" target="_blank">
-				<img src="/assets/media/animalese.gif">
-				<h3 class="caffeine">Animalese</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">Animalese</span>
+					</h3>
+					<img src="/assets/icons/animalese.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/animalese.jpg">
+						<source data-src="/assets/thumbnails/animalese.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://jukebox.barcoloudly.com" target="_blank">
-				<img src="/assets/media/jukebox.gif">
-				<h3 class="caffeine">Jukebox</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">Jukebox</span>
+					</h3>
+					<img src="/assets/icons/jukebox.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/jukebox.jpg">
+						<source data-src="/assets/thumbnails/jukebox.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://bgm.barcoloudly.com" target="_blank">
-				<img src="/assets/media/bgm.gif">
-				<h3 class="caffeine">BGM</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">BGM</span>
+					</h3>
+					<img src="/assets/icons/bgm.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/bgm.jpg">
+						<source data-src="/assets/thumbnails/bgm.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://qr.barcoloudly.com" target="_blank">
-				<img src="/assets/media/qr.gif">
-				<h3 class="caffeine">QR Generator Generator</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">QR Generator Generator</span>
+					</h3>
+					<img src="/assets/icons/qr.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/qr.jpg">
+						<source data-src="/assets/thumbnails/qr.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://fontbox.barcoloudly.com" target="_blank">
-				<img src="/assets/media/fontbox.gif">
-				<h3 class="caffeine">Fontbox</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">Fontbox</span>
+					</h3>
+					<img src="/assets/icons/fontbox.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/fontbox.jpg">
+						<source data-src="/assets/thumbnails/fontbox.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://welcome.barcoloudly.com" target="_blank">
-				<img src="/assets/media/welcome.gif">
-				<h3 class="caffeine">Welcome</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">Welcome</span>
+					</h3>
+					<img src="/assets/icons/welcome.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/welcome.jpg">
+						<source data-src="/assets/thumbnails/welcome.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://aurora.barcoloudly.com" target="_blank">
-				<img src="/assets/media/aurora.gif">
-				<h3 class="caffeine">Aurora</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">Aurora</span>
+					</h3>
+					<img src="/assets/icons/aurora.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/aurora.jpg">
+						<source data-src="/assets/thumbnails/aurora.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://ghost.barcoloudly.com" target="_blank">
-				<img src="/assets/media/ghost.gif">
-				<h3 class="caffeine">Ghost</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">Ghost</span>
+					</h3>
+					<img src="/assets/icons/ghost.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/ghost.jpg">
+						<source data-src="/assets/thumbnails/ghost.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://gems.barcoloudly.com" target="_blank">
-				<img src="/assets/media/gems.gif">
-				<h3 class="caffeine">Gems</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">Gems</span>
+					</h3>
+					<img src="/assets/icons/gems.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/gems.jpg">
+						<source data-src="/assets/thumbnails/gems.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://zag.barcoloudly.com" target="_blank">
-				<img src="/assets/media/zag.gif">
-				<h3 class="caffeine">Zag</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">Zag</span>
+					</h3>
+					<img src="/assets/icons/zag.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/zag.jpeg">
+						<source data-src="/assets/thumbnails/zag.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://nauticalmaps.barcoloudly.com" target="_blank">
-				<img src="/assets/media/nauticalmaps.gif">
-				<h3 class="caffeine">Nautical Maps</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">Nautical Maps</span>
+					</h3>
+					<img src="/assets/icons/nauticalmaps.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/nauticalmaps.jpg">
+						<source data-src="/assets/thumbnails/nauticalmaps.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://picketfence.barcoloudly.com" target="_blank">
-				<img src="/assets/media/picketfence.gif">
-				<h3 class="caffeine">Picket Fence</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">Picket Fence</span>
+					</h3>
+					<img src="/assets/icons/picketfence.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/picketfence.jpg">
+						<source data-src="/assets/thumbnails/picketfence.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://doesnotexist.barcoloudly.com" target="_blank">
-				<img src="/assets/media/doesnotexist.gif">
-				<h3 class="caffeine">Does Not Exist</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">Does Not Exist</span>
+					</h3>
+					<img src="/assets/icons/doesnotexist.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/doesnotexist.jpg">
+						<source data-src="/assets/thumbnails/doesnotexist.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://onomatopoeia.barcoloudly.com" target="_blank">
-				<img src="/assets/media/onomatopoeia.gif">
-				<h3 class="caffeine">Onomatopoeia</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">Onomatopoeia</span>
+					</h3>
+					<img src="/assets/icons/onomatopoeia.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/onomatopoeia.jpg">
+						<source data-src="/assets/thumbnails/onomatopoeia.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://zoom.barcoloudly.com" target="_blank">
-				<img src="/assets/media/zoooooooom.gif">
-				<h3 class="caffeine">Zoooooooom</h3>
-			</a>
-
-			<a class="project" href="https://madgab4ever.com" target="_blank">
-				<img src="/assets/media/madgab4ever.gif">
-				<h3 class="caffeine">madgab4ever</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">Zoooooooom</span>
+					</h3>
+					<img src="/assets/icons/zoom.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/zoom.jpg">
+						<source data-src="/assets/thumbnails/zoom.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://earworm.barcoloudly.com" target="_blank">
-				<img src="/assets/media/earworm.gif">
-				<h3 class="caffeine">Earworm</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">Earworm</span>
+					</h3>
+					<img src="/assets/icons/earworm.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/earworm.jpg">
+						<source data-src="/assets/thumbnails/earworm.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://px2.barcoloudly.com" target="_blank">
-				<img src="/assets/media/pixelweaver2.gif">
-				<h3 class="caffeine">Pixel Weaver 2.0</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">Pixel Weaver 2.0</span>
+					</h3>
+					<img src="/assets/icons/px2.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/px2.jpg">
+						<source data-src="/assets/thumbnails/px2.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://landscape.barcoloudly.com" target="_blank">
-				<img src="/assets/media/landscape.gif">
-				<h3 class="caffeine">Untitled (Digital Landscape)</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">Untitled (Digital Landscape)</span>
+					</h3>
+					<img src="/assets/icons/landscape.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/landscape.jpg">
+						<source data-src="/assets/thumbnails/landscape.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://compendium.barcoloudly.com" target="_blank">
-				<img src="/assets/media/compendium.gif">
-				<h3 class="caffeine">A Thesis Compendium</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">A Thesis Compendium</span>
+					</h3>
+					<img src="/assets/icons/compendium.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/compendium.jpg">
+						<source data-src="/assets/thumbnails/compendium.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://notes.barcoloudly.com" target="_blank">
-				<img src="/assets/media/notes.gif">
-				<h3 class="caffeine">Notes from Neither Here nor There</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">Notes from Neither Here nor There</span>
+					</h3>
+					<img src="/assets/icons/notes.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/notes.jpg">
+						<source data-src="/assets/thumbnails/notes.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://whatiswikipedia.barcoloudly.com" target="_blank">
-				<img src="/assets/media/wikipedia.gif">
-				<h3 class="caffeine">What Is Wikipedia?</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">What Is Wikipedia?</span>
+					</h3>
+					<img src="/assets/icons/whatiswikipedia.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/whatiswikipedia.jpg">
+						<source data-src="/assets/thumbnails/whatiswikipedia.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://smilethroughit.barcoloudly.com" target="_blank">
-				<img src="/assets/media/smilethroughit.gif">
-				<h3 class="caffeine">Smile Through It</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">Smile Through It</span>
+					</h3>
+					<img src="/assets/icons/smilethroughit.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/smilethroughit.jpg">
+						<source data-src="/assets/thumbnails/smilethroughit.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://px1.barcoloudly.com" target="_blank">
-				<img src="/assets/media/pixelweaver1.gif">
-				<h3 class="caffeine">Pixel Weaver 1.0</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">Pixel Weaver 1.0</span>
+					</h3>
+					<img src="/assets/icons/px1.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/px1.jpg">
+						<source data-src="/assets/thumbnails/px1.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://otf-ttf.barcoloudly.com" target="_blank">
-				<img src="/assets/media/otf-ttf.gif">
-				<h3 class="caffeine">.otf, .ttf</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">.otf, .ttf</span>
+					</h3>
+					<img src="/assets/icons/otf-ttf.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/otf-ttf.jpg">
+						<source data-src="/assets/thumbnails/otf-ttf.mp4">
+					</video>
+				</div>
 			</a>
 
 			<a class="project" href="https://calligraphers.barcoloudly.com" target="_blank">
-				<img src="/assets/media/calligraphers.gif">
-				<h3 class="caffeine">Tag Team Calligraphers</h3>
+				<div class="project-info">
+					<h3 class="project-title">
+						<span class="project-title-code"></span>
+						<span class="project-title-name">Tag Team Calligraphers</span>
+					</h3>
+					<img src="/assets/icons/calligraphers.gif" class="project-icon">
+				</div>
+				<div class="project-media">
+					<video autoplay muted loop class="project-thumbnail" poster="/assets/thumbnails/calligraphers.jpg">
+						<source data-src="/assets/thumbnails/calligraphers.mp4">
+					</video>
+				</div>
 			</a>
 		</main>
 	</div>

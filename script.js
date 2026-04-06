@@ -1,37 +1,21 @@
-// handwritten text
-function initCaffeine() {
-	let caffeine = document.querySelectorAll('.caffeine');
-	for (let elmnt of caffeine) {
-		let elmntText = elmnt.innerHTML;
-		let words = elmntText.split(' ');
-		let temp = '';
-		let wordIndex = 0;
-		for (let word of words) {
-			let letterTemp = '';
-			for (let letter of word) {
-				letterTemp += `<span class="letter" style="font-variation-settings: 'SCRI' ${Math.random()*100}, 'SCRA' ${Math.random()*100}">${letter}</span>`;
-			}
-			if (wordIndex < words.length-1) {
-				temp += `<span class="word">${letterTemp}</span> `;
-			} else {
-				temp += `<span class="word">${letterTemp}</span>`;
-			}
-			wordIndex++;
+// init numbers
+function initNumbers() {
+	let projects = document.querySelectorAll('.project');
+	let i = 0;
+	for (let project of projects) {
+		let code = project.querySelector('.project-title-code');
+		let number = Math.round(projects.length-i);
+		if (number < 10) {
+			code.innerHTML = "00"+number;
+		} else if (number < 100) {
+			code.innerHTML = "0"+number;
+		} else {
+			code.innerHTML = number;
 		}
-		elmnt.innerHTML = temp;
+		i++;
 	}
-	animateLetters();
 }
-function animateLetters() {
-	let animated = document.querySelectorAll('.animated');
-	for (let elmnt of animated) {
-		for (let letter of elmnt.querySelectorAll('.letter')) {
-			letter.style.fontVariationSettings = `"SCRI" ${Math.random()*100}, "SCRA" ${Math.random()*100}`;
-		}
-	}
-	setTimeout(animateLetters, 200);
-}
-initCaffeine();
+initNumbers();
 
 // mouse
 let container = document.querySelector('.container');
@@ -55,3 +39,55 @@ function goRando() {
 	let randomLink = links[Math.floor(Math.random()*links.length)];
 	window.open(randomLink.href, '_blank');
 }
+
+// init sidebars
+function initSidebars() {
+	let projects = document.querySelectorAll('.project');
+	let sidebarLeft = document.querySelector('.sidebar-left');
+	let sidebarLeftTemp = "";
+	let sidebarRight = document.querySelector('.sidebar-right');
+	let sidebarRightTemp = "";
+	let i=0;
+	for (let project of projects) {
+		let icon = project.querySelector('.project-icon');
+		if (i < projects.length/2) {
+			sidebarLeftTemp += `<div class="sidebar-icon"><img src="${icon.src}"></div>`;
+		} else {
+			sidebarRightTemp += `<div class="sidebar-icon"><img src="${icon.src}"></div>`;
+		}
+		i++;
+	}
+	sidebarLeft.innerHTML = sidebarLeftTemp;
+	sidebarRight.innerHTML = sidebarRightTemp;
+}
+initSidebars();
+
+// lazy load videos
+const callback = new IntersectionObserver((entries, observer) => {
+	entries.forEach(entry => {
+		let video = entry.target.querySelector('video');
+		let videoSource = entry.target.querySelector('source');
+		if (entry.isIntersecting) {
+			videoSource.src = videoSource.dataset.src;
+			video.pause();
+			video.load();
+		} else {
+			if (videoSource != undefined) {
+				videoSource.removeAttribute('src');
+				video.pause();
+				video.load();
+			}
+		}
+	});
+}, {
+	root: null,
+	rootMargin: '0px 0px 500px 0px', 
+	threshold: 0.01
+});
+function lazyLoadVideos() {
+	let projects = document.querySelectorAll('.project');
+	for (let project of projects) {
+		callback.observe(project);
+	}
+}
+lazyLoadVideos();
