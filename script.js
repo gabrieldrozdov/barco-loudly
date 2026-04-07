@@ -81,13 +81,25 @@ const callback = new IntersectionObserver((entries, observer) => {
 	});
 }, {
 	root: null,
-	rootMargin: '0px 0px 500px 0px', 
+	rootMargin: '0px 0px 0px 0px', 
 	threshold: 0.01
 });
 function lazyLoadVideos() {
 	let projects = document.querySelectorAll('.project');
 	for (let project of projects) {
-		callback.observe(project);
+		let video = project.querySelector('video');
+		let videoSource = project.querySelector('source');
+		project.addEventListener('mouseenter', () => {
+			videoSource.src = videoSource.dataset.src;
+			video.pause();
+			video.load();
+		})
+		project.addEventListener('mouseleave', () => {
+			videoSource.removeAttribute('src');
+			video.pause();
+			video.load();
+		})
+		// callback.observe(project);
 	}
 }
 lazyLoadVideos();
