@@ -90,9 +90,11 @@ function lazyLoadVideos() {
 		let video = project.querySelector('video');
 		let videoSource = project.querySelector('source');
 		project.addEventListener('mouseenter', () => {
-			videoSource.src = videoSource.dataset.src;
-			video.pause();
-			video.load();
+			if (window.innerWidth > 600) {
+				videoSource.src = videoSource.dataset.src;
+				video.pause();
+				video.load();
+			}
 		})
 		project.addEventListener('mouseleave', () => {
 			videoSource.removeAttribute('src');
