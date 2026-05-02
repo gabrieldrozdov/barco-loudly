@@ -76,6 +76,12 @@ img {
 	width: 100%;
 	animation: sidebar-icon-rotate steps(1) 1s infinite alternate;
 }
+body[data-static="1"] .sidebar-icon {
+	animation-play-state: paused;
+}
+body[data-static="1"] .sidebar-icon img {
+	animation-play-state: paused;
+}
 .sidebar-icon:nth-child(even) {
 	animation-delay: -1s;
 }
@@ -98,7 +104,6 @@ img {
 		transform: rotate(-30deg);
 	}
 }
-
 
 /* Header */
 .header {
@@ -127,6 +132,8 @@ img {
 .nav {
 	display: flex;
 	gap: 20px;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 .nav-link {
 	color: white;
@@ -160,6 +167,15 @@ img {
 }
 .nav-link:nth-child(3n+3)::before {
 	background-image: url('/assets/ui/textframe3.gif');
+}
+body[data-static="1"] .nav-link:nth-child(3n+1)::before {
+	background-image: url('/assets/ui/textframe1.png');
+}
+body[data-static="1"] .nav-link:nth-child(3n+2)::before {
+	background-image: url('/assets/ui/textframe2.png');
+}
+body[data-static="1"] .nav-link:nth-child(3n+3)::before {
+	background-image: url('/assets/ui/textframe3.png');
 }
 .nav-link:hover {
 	filter: invert(0%) drop-shadow(1px 1px black) drop-shadow(-1px -1px black) drop-shadow(-1px 1px black) drop-shadow(1px -1px black);
@@ -199,6 +215,9 @@ img {
 .project:hover::before {
 	background-image: url('/assets/ui/select.gif');
 }
+body[data-static="1"] .project:hover::before {
+	background-image: url('/assets/ui/select.png');
+}
 .project-media {
 	position: relative;
 	background-color: black;
@@ -221,6 +240,15 @@ img {
 }
 .project:nth-child(3n+3) .project-media::before {
 	background-image: url("/assets/ui/frame3.gif");
+}
+body[data-static="1"] .project:nth-child(3n+1) .project-media::before {
+	background-image: url("/assets/ui/frame1.png");
+}
+body[data-static="1"] .project:nth-child(3n+2) .project-media::before {
+	background-image: url("/assets/ui/frame2.png");
+}
+body[data-static="1"] .project:nth-child(3n+3) .project-media::before {
+	background-image: url("/assets/ui/frame3.png");
 }
 .project-frame {
 	position: absolute;
@@ -281,6 +309,15 @@ img {
 .project:nth-child(3n+3) .project-title-code::before {
 	background-image: url('/assets/ui/textframe3.gif');
 }
+body[data-static="1"] .project:nth-child(3n+1) .project-title-code::before {
+	background-image: url('/assets/ui/textframe1.png');
+}
+body[data-static="1"] .project:nth-child(3n+2) .project-title-code::before {
+	background-image: url('/assets/ui/textframe2.png');
+}
+body[data-static="1"] .project:nth-child(3n+3) .project-title-code::before {
+	background-image: url('/assets/ui/textframe3.png');
+}
 .project-title-name {
 	text-transform: lowercase;
 	font-size: 18px;
@@ -307,6 +344,9 @@ img {
 	right: 0;
 	background-image: url('/assets/media/footer.gif');
 	background-size: 100% 100%;
+}
+body[data-static="1"] .footer::before {
+	background-image: url('/assets/media/footer.png');
 }
 
 /* Info */
@@ -363,6 +403,9 @@ img {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+}
+body[data-static="1"] .info-return {
+	background-image: url("/assets/ui/blob.png");
 }
 .info-return-left {
 	bottom: 0;

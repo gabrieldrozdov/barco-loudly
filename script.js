@@ -105,3 +105,30 @@ function lazyLoadVideos() {
 	}
 }
 lazyLoadVideos();
+
+// turn off motion
+let motion = true;
+function toggleMotion() {
+	let body = document.querySelector('body');
+	let imgs = document.querySelectorAll('img');
+	if (motion) {
+		body.dataset.static = 1;
+		imgs.forEach(img => {
+			let gif = img.src;
+			img.dataset.gif = gif;
+	
+			if (gif.toLowerCase().endsWith('.gif')) {
+				let png = gif.replace(/\.gif$/i, '.png');
+				img.src = png;
+			}
+		});
+	} else {
+		body.dataset.static = 0;
+		imgs.forEach(img => {
+			if (img.dataset.gif != undefined) {
+				img.src = img.dataset.gif;
+			}
+		});
+	}
+	motion = !motion;
+}
